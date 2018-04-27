@@ -1,5 +1,13 @@
-package com.yjh.pattern.builder;
+package com.yjh.pattern.createType.factory.simpleFacotry;
 
+/**
+ * Copyright © 2017/12/18 Shanxi WenDao Culture and Technology Co., Ltd. All rights reserved.
+ * <p>
+ * Author: yjh
+ * Date: 2018/4/27 14:56
+ * Version: 1.0
+ * Desc:
+ */
 public abstract class Person {
 
     protected String name;
@@ -30,10 +38,10 @@ public abstract class Person {
     }
 }
 
-class Monkey extends Person{
+class Monkey extends Person {
 
 }
 
-class Pig extends Person{
+class Pig extends Person {
 
 }

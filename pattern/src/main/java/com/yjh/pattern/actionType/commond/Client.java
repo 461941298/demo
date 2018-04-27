@@ -1,12 +1,12 @@
-package com.yjh.pattern.factory.factoryMethod;
+package com.yjh.pattern.actionType.commond;
 
 /**
  * Copyright © 2017/12/18 Shanxi WenDao Culture and Technology Co., Ltd. All rights reserved.
  * <p>
  * Author: yjh
- * Date: 2018/4/25 11:56
+ * Date: 2018/4/27 15:23
  * Version: 1.0
- * Desc: 工厂方法
+ * Desc: 命令模式
  */
 public class Client {
 }

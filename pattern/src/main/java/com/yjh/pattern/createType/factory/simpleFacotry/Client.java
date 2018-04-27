@@ -1,4 +1,4 @@
-package com.yjh.pattern.factory.simpleFacotry;
+package com.yjh.pattern.createType.factory.simpleFacotry;
 
 import org.junit.Test;
 
@@ -14,6 +14,8 @@ public class Client {
 
     @Test
     public void test() {
-        System.out.println("test");
+        Person wuKong = PersonFactory.getPerson(Monkey.class);
+        System.out.println(wuKong instanceof Monkey);
+        System.out.println(wuKong instanceof Pig);
     }
 }
