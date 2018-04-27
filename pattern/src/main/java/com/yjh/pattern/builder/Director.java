@@ -9,6 +9,8 @@ public class Director {
     }
 
     public Person getPerson() {
+        personBuilder.setName();
+        personBuilder.setArms();
         return personBuilder.build();
     }
 }

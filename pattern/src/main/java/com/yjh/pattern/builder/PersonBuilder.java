@@ -9,8 +9,6 @@ public abstract class PersonBuilder {
     abstract void setArms();
 
     public Person build() {
-        setName();
-        setArms();
         return person;
     }
 }
@@ -32,7 +30,7 @@ class MonkeyBuilder extends PersonBuilder {
     }
 }
 
-class PigBuilder extends PersonBuilder{
+class PigBuilder extends PersonBuilder {
 
 
     public PigBuilder() {
