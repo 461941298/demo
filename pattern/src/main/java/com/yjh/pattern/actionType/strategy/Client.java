@@ -9,4 +9,8 @@ package com.yjh.pattern.actionType.strategy;
  * Desc: 策略模式
  */
 public class Client {
+
+    /**
+     * 没什么好说的,最简单的一个模式了...
+     */
 }
