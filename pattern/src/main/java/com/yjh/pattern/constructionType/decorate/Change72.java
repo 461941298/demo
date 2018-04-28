@@ -16,10 +16,10 @@ public interface Change72 {
 
 abstract class SuperMonkey implements Change72 {
 
-    Monkey monkey;
+    Change72 change72;
 
-    public SuperMonkey(Monkey monkey) {
-        this.monkey = monkey;
+    public SuperMonkey(Change72 change72) {
+        this.change72 = change72;
     }
 }
 
@@ -33,8 +33,8 @@ class Monkey implements Change72 {
 
 class Fish extends SuperMonkey {
 
-    public Fish(Monkey monkey) {
-        super(monkey);
+    public Fish(Change72 change72) {
+        super(change72);
     }
 
     @Override
@@ -45,8 +45,8 @@ class Fish extends SuperMonkey {
 
 class Bird extends SuperMonkey {
 
-    public Bird(Monkey monkey) {
-        super(monkey);
+    public Bird(Change72 change72) {
+        super(change72);
     }
 
     @Override
