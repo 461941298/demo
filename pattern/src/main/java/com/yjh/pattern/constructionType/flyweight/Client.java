@@ -2,6 +2,8 @@ package com.yjh.pattern.constructionType.flyweight;
 
 import org.junit.Test;
 
+import java.io.BufferedReader;
+
 public class Client {
 
     /**
