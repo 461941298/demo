@@ -1,20 +1,10 @@
 package com.yjh.jpa;
 
 import com.yjh.jpa.domain.PerformanceEntity;
-import com.yjh.jpa.utils.MyJPA;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
-import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
-import javax.persistence.Persistence;
-import javax.persistence.PersistenceUnitUtil;
-import javax.persistence.spi.PersistenceUnitInfo;
-import javax.transaction.Transaction;
-import javax.transaction.Transactional;
 import java.util.List;
-import java.util.UUID;
 
 /**
  * Copyright © 2017/12/18 Shanxi WenDao Culture and Technology Co., Ltd. All rights reserved.

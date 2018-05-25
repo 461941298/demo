@@ -17,7 +17,6 @@ import javax.persistence.*;
 public class ActorEntity {
     private Long id;
     private String name;
-    private Integer sex;
 
     @Id
     @GeneratedValue
@@ -38,12 +37,4 @@ public class ActorEntity {
         this.name = name;
     }
 
-    @Column(name = "sex")
-    public Integer getSex() {
-        return sex;
-    }
-
-    public void setSex(Integer sex) {
-        this.sex = sex;
-    }
 }

@@ -1,10 +1,6 @@
 package com.yjh.jpa.domain;
 
-import com.sun.istack.internal.NotNull;
-import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
-import java.util.Date;
 
 /**
  * Copyright © 2017/12/18 Shanxi WenDao Culture and Technology Co., Ltd. All rights reserved.
