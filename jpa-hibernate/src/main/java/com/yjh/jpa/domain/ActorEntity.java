@@ -13,7 +13,7 @@ import javax.persistence.*;
  * Desc:
  */
 @Entity
-@Table(name = "actor")
+@Table(name = "my_actor")
 public class ActorEntity {
     private Long id;
     private String name;

@@ -11,7 +11,7 @@ import javax.persistence.*;
  * Desc: 场次
  */
 @Entity
-@Table(name = "ronda")
+@Table(name = "my_ronda")
 public class RondaEntity {
     private Long id;
     private String name;

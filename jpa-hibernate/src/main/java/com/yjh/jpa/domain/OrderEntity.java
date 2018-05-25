@@ -1,6 +1,7 @@
 package com.yjh.jpa.domain;
 
 import javax.persistence.*;
+import java.util.Date;
 
 /**
  * Copyright © 2017/12/18 Shanxi WenDao Culture and Technology Co., Ltd. All rights reserved.
@@ -11,12 +12,12 @@ import javax.persistence.*;
  * Desc:
  */
 @Entity
-@Table(name = "order")
+@Table(name = "my_order")
 public class OrderEntity {
     private Long id;
     private String code;
     private Double amount;
-    private Double createdTime;
+    private Date createdTime;
     private Long rondaId;
 
     @Id
@@ -29,7 +30,7 @@ public class OrderEntity {
         this.id = id;
     }
 
-    @Column(name = "code", length = 64, nullable = false, unique = true)
+    @Column(name = "code", length = 64, nullable = false)
     public String getCode() {
         return code;
     }
@@ -48,11 +49,11 @@ public class OrderEntity {
     }
 
     @Column(name = "created_time", nullable = false)
-    public Double getCreatedTime() {
+    public Date getCreatedTime() {
         return createdTime;
     }
 
-    public void setCreatedTime(Double createdTime) {
+    public void setCreatedTime(Date createdTime) {
         this.createdTime = createdTime;
     }
 

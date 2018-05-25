@@ -13,6 +13,7 @@ import javax.persistence.PersistenceUnitUtil;
 import javax.persistence.spi.PersistenceUnitInfo;
 import javax.transaction.Transaction;
 import javax.transaction.Transactional;
+import java.util.List;
 import java.util.UUID;
 
 /**
@@ -34,6 +35,12 @@ public class PerformanceTest extends BaseTest {
         performanceEntity1.setTitle("大河之舞");
         entityManager.persist(performanceEntity1);
         transaction.commit();
+
+        List<PerformanceEntity> performanceEntities = entityManager
+                .createQuery("SELECT p FROM PerformanceEntity as p where p.title LIKE '%大河%'")
+                .getResultList();
+
+        System.out.println(performanceEntities);
     }
 
 

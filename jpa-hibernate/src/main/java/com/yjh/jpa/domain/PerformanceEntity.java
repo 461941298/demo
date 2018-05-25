@@ -15,7 +15,7 @@ import java.util.Date;
  * Desc: 演出
  */
 @Entity
-@Table(name = "performance")
+@Table(name = "my_performance")
 public class PerformanceEntity {
     private Long id;
     private String title;
