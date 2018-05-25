@@ -2,7 +2,8 @@
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
              version="2.0">
-    <persistence-unit name="myPersistenceUnit">
+
+    <persistence-unit name="yjh.jpa.study">
 
         <description>
             persistence for jpa
@@ -10,7 +11,7 @@
 
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
-        <!--<class>org.hibernate.documentation.userguide.Document</class>-->
+        <!--<class>com.yjh.jpa.domain.PerformanceEntity</class>-->
 
         <properties>
             <property name="javax.persistence.jdbc.driver"
@@ -23,14 +24,20 @@
                       value="root"/>
 
             <property name="javax.persistence.jdbc.password"
-                      value="651028"/>
+                      value=""/>
+
+            <!-- 数据库方言 -->
+            <property name="hibernate.dialect"
+                      value="org.hibernate.dialect.MySQL5Dialect"/>
 
             <property name="hibernate.show_sql"
                       value="true"/>
 
             <property name="hibernate.hbm2ddl.auto"
-                      value="update"/>
+                      value="create"/>
+            
         </properties>
+
 
     </persistence-unit>
 </persistence>
