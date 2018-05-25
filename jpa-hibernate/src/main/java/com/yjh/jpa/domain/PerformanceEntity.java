@@ -1,11 +1,9 @@
 package com.yjh.jpa.domain;
 
+import com.sun.istack.internal.NotNull;
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * Copyright © 2017/12/18 Shanxi WenDao Culture and Technology Co., Ltd. All rights reserved.
@@ -19,10 +17,10 @@ import javax.persistence.Table;
 @Table(name = "performance")
 public class PerformanceEntity {
     private Long id;
+    private String title;
 
     @Id
-    @GeneratedValue(generator="increment")
-    @GenericGenerator(name="increment", strategy = "increment")
+    @GeneratedValue
     public Long getId() {
         return id;
     }
@@ -31,4 +29,12 @@ public class PerformanceEntity {
         this.id = id;
     }
 
+    @Column(name = "title", length = 64, nullable = false)
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
 }

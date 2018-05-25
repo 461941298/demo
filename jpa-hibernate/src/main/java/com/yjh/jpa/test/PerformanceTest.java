@@ -7,9 +7,12 @@ import org.junit.Before;
 import org.junit.Test;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.persistence.PersistenceUnitUtil;
 import javax.persistence.spi.PersistenceUnitInfo;
+import javax.transaction.Transaction;
+import javax.transaction.Transactional;
 import java.util.UUID;
 
 /**
@@ -37,9 +40,13 @@ public class PerformanceTest {
     }
 
     @Test
-    public void addTest(){
+    public void addTest() {
+        EntityTransaction transaction = entityManager.getTransaction();
+        transaction.begin();
         PerformanceEntity performanceEntity1 = new PerformanceEntity();
+        performanceEntity1.setTitle("大河之舞");
         entityManager.persist(performanceEntity1);
+        transaction.commit();
     }
 
 

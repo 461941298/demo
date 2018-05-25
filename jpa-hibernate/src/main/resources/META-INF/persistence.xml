@@ -18,7 +18,7 @@
                       value="com.mysql.jdbc.Driver"/>
 
             <property name="javax.persistence.jdbc.url"
-                      value="jdbc:mysql://localhost:3306/jpa_test?useUnicode=true"/>
+                      value="jdbc:mysql://localhost:3306/jpa_test?characterEncoding=utf-8"/>
 
             <property name="javax.persistence.jdbc.user"
                       value="root"/>
@@ -35,7 +35,7 @@
 
             <property name="hibernate.hbm2ddl.auto"
                       value="create"/>
-            
+
         </properties>
 
 
