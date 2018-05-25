@@ -1,4 +1,4 @@
-package com.yjh.jpa.test;
+package com.yjh.jpa;
 
 import com.yjh.jpa.domain.PerformanceEntity;
 import com.yjh.jpa.utils.MyJPA;
@@ -23,25 +23,12 @@ import java.util.UUID;
  * Version: 1.0
  * Desc:
  */
-public class PerformanceTest {
+public class PerformanceTest extends BaseTest {
 
-    private EntityManager entityManager;
-
-    @Before
-    public void setup() {
-        this.entityManager = MyJPA.getManager();
-    }
-
-    @After
-    public void tearDown() {
-        if (null != this.entityManager) {
-            entityManager.close();
-        }
-    }
 
     @Test
     public void addTest() {
-        EntityTransaction transaction = entityManager.getTransaction();
+        EntityTransaction transaction = this.entityManager.getTransaction();
         transaction.begin();
         PerformanceEntity performanceEntity1 = new PerformanceEntity();
         performanceEntity1.setTitle("大河之舞");
