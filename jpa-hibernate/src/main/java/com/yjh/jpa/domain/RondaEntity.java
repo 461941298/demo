@@ -15,7 +15,7 @@ import javax.persistence.*;
 public class RondaEntity {
     private Long id;
     private String name;
-    private Long performanceId;
+    private PerformanceEntity performance;
 
     @Id
     @GeneratedValue
@@ -36,12 +36,13 @@ public class RondaEntity {
         this.name = name;
     }
 
-    @Column(name = "performance_id", nullable = false)
-    public Long getPerformanceId() {
-        return performanceId;
+    @ManyToOne
+    @JoinColumn(name = "performance_id", foreignKey = @ForeignKey)
+    public PerformanceEntity getPerformance() {
+        return performance;
     }
 
-    public void setPerformanceId(Long performanceId) {
-        this.performanceId = performanceId;
+    public void setPerformance(PerformanceEntity performance) {
+        this.performance = performance;
     }
 }

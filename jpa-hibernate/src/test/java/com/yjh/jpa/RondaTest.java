@@ -1,5 +1,6 @@
 package com.yjh.jpa;
 
+import com.yjh.jpa.domain.PerformanceEntity;
 import com.yjh.jpa.domain.RondaEntity;
 import org.junit.Test;
 
@@ -22,13 +23,14 @@ public class RondaTest extends BaseTest {
         EntityTransaction transaction = this.entityManager.getTransaction();
         transaction.begin();
 
+        PerformanceEntity performanceEntity = entityManager.find(PerformanceEntity.class, 1L);
         RondaEntity rondaEntity1 = new RondaEntity();
         rondaEntity1.setName("2018-5-25 15:30");
-        rondaEntity1.setPerformanceId(1L);
+        rondaEntity1.setPerformance(performanceEntity);
 
         RondaEntity rondaEntity2 = new RondaEntity();
         rondaEntity2.setName("2018-5-26 15:30");
-        rondaEntity2.setPerformanceId(1L);
+        rondaEntity2.setPerformance(performanceEntity);
 
         this.entityManager.persist(rondaEntity1);
         this.entityManager.persist(rondaEntity2);
