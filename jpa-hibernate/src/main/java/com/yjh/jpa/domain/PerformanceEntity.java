@@ -1,6 +1,7 @@
 package com.yjh.jpa.domain;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
  * Copyright © 2017/12/18 Shanxi WenDao Culture and Technology Co., Ltd. All rights reserved.
@@ -15,6 +16,7 @@ import javax.persistence.*;
 public class PerformanceEntity {
     private Long id;
     private String title;
+    private List<RondaEntity> rondas;
 
     @Id
     @GeneratedValue
@@ -33,5 +35,14 @@ public class PerformanceEntity {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    @OneToMany(mappedBy = "performance")
+    public List<RondaEntity> getRondas() {
+        return rondas;
+    }
+
+    public void setRondas(List<RondaEntity> rondas) {
+        this.rondas = rondas;
     }
 }
