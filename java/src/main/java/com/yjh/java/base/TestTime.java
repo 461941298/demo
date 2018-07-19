@@ -44,7 +44,7 @@ public class TestTime {
         System.out.println(calendar.get(Calendar.MONTH));
         System.out.println(calendar.get(Calendar.DAY_OF_MONTH));
         System.out.println(calendar.get(Calendar.HOUR));
-        System.out.println(calendar.get(Calendar.));
+        System.out.println(calendar.get(Calendar.DATE));
         System.out.println(calendar.get(Calendar.HOUR));
 
     }
